@@ -151,7 +151,8 @@ public class Utils {
             JSONObject baseJsonResponse = new JSONObject(newsApiJSON);
             // If there are "results" in the response create an array
             if (baseJsonResponse.has("response")) {
-                JSONObject hasResponse = baseJsonResponse.getJSONObject("results");
+              //  JSONObject hasResponse = baseJsonResponse.getJSONObject("results");
+                JSONObject hasResponse = new JSONObject(newsApiJSON);
 
                 if (hasResponse.has("results")){
 
