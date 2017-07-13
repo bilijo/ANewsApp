@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_layout_margin">10dp</dimen>
+    <dimen name="view_padding">10dp</dimen>
+    <dimen name="List_padding">90dp</dimen>
+    <dimen name="data_text_size">16sp</dimen>
+    <dimen name="publisher_row_margin">10dp</dimen>
+</resources>

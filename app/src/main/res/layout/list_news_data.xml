@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/main_layout_margin" >
+
+        <TextView
+            android:id="@+id/text_title_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/view_padding"
+            android:layout_weight="1"
+            android:textSize="@dimen/data_text_size"
+            android:background="@color/row_title"
+            android:text="@string/book_title"/>
+
+        <TextView
+            android:id="@+id/text_author_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/view_padding"
+            android:textSize="@dimen/data_text_size"
+            android:background="@color/row_author"
+            android:text="@string/book_author" />
+
+        <TextView
+            android:id="@+id/text_publisher_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/view_padding"
+            android:layout_marginBottom="@dimen/publisher_row_margin"
+            android:textSize="@dimen/data_text_size"
+            android:background="@color/row_publisher"
+            android:text="@string/book_author" />
+    </LinearLayout>
+
+
+
+

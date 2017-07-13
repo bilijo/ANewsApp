@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/main_layout_margin"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    tools:context="com.example.android.anewsapp.MainActivity">
+
+  <LinearLayout
+        android:id="@+id/linear_layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+      android:layout_alignParentTop="true"
+      android:layout_marginTop="15dp"
+        android:layout_weight="1" >
+
+        <!-- Button to fetch books -->
+        <Button
+            android:id="@+id/button_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/btn_search" />
+
+      <!-- Field to enter author's name as search key -->
+         <EditText
+            android:id="@+id/editText_toSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+             android:text="service"/>
+
+
+    </LinearLayout>
+    <!-- View for a item list of books -->
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/listView_news"
+        android:layout_above="@+id/linear_layout_search"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/List_padding"
+        android:visibility="visible"/>
+
+ <!-- Empty view is only visible when the list has no items. -->
+    <TextView
+        android:id="@+id/text_emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear_layout_search"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        style="@style/emptyText"
+        android:text="@string/textView_not_found"
+        android:visibility="gone"/>
+
+
+
+</RelativeLayout>
