@@ -5,28 +5,28 @@ package com.example.android.anewsapp;
  */
 
 public class NewsData {
-    // Variables of the BooksData class which will be displayed
-    private String mBookTitle;
-    private String mAuthor;
-    private String mPublisher;
+    // Variables of the NewsData class which will be displayed
+    private String mNewsTitle;
+    private String mSectionName;
+    private String mWebUrl;
 
-    // Constructor of the BooksData class
-    public NewsData(String vTitle,String vAuthor,String vPublisher) {
-        mBookTitle = vTitle;
-        mAuthor = vAuthor;
-        mPublisher = vPublisher;
+    // Constructor of the NewsData class
+    public NewsData(String vTitle,String vSectionName,String vWebUrl) {
+        mNewsTitle = vTitle;
+        mSectionName = vSectionName;
+        mWebUrl = vWebUrl;
     }
 
     // getters
-    public String getmBookTitle() {
-        return mBookTitle;
+    public String getmNewsTitle() {
+        return mNewsTitle;
     }
 
-    public String getmAuthor() {
-        return mAuthor;
+    public String getmSectionName() {
+        return mSectionName;
     }
 
-    public String getmPublisher() {
-        return mPublisher;
+    public String getmWebUrl() {
+        return mWebUrl;
     }
 }

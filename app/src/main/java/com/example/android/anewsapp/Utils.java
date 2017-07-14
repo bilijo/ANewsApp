@@ -1,9 +1,7 @@
 package com.example.android.anewsapp;
 
-import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,8 +17,6 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.widget.Toast.LENGTH_LONG;
 
 /**
  * Created by dam on 03.07.2017.
@@ -56,7 +52,7 @@ public class Utils {
         List<NewsData> news = extractFeatureFromJson(jsonResponse);
 
         // Return the {@link NewsData}
-        Log.d(LOG_TAG, "fetchNewsData =******" + jsonResponse);
+
         Log.d(LOG_TAG, "*** news= ******" + news);
         return news;
     }
@@ -151,13 +147,13 @@ public class Utils {
             JSONObject baseJsonResponse = new JSONObject(newsApiJSON);
             // If there are "results" in the response create an array
             if (baseJsonResponse.has("response")) {
-              //  JSONObject hasResponse = baseJsonResponse.getJSONObject("results");
+
                 JSONObject hasResponse = new JSONObject(newsApiJSON);
 
-                if (hasResponse.has("results")){
+                if (hasResponse.has("results")) {
 
                     JSONArray itemsArray = baseJsonResponse.getJSONArray("results");
-                    Log.d(LOG_TAG, "***hasResponse****" + hasResponse);
+
 
                     // Retrieve all items what are needed to be shown
                     for (int i = 0; i < itemsArray.length(); i++) {
@@ -165,20 +161,21 @@ public class Utils {
                         // Extract out the first feature (which is a news info)
                         JSONObject properties = itemsArray.getJSONObject(i);
                         // JSONObject properties = itemsRow.getJSONObject("results");
-                        Log.d(LOG_TAG, "properties=" + properties);
+
+
                         String title = " ";
                         // Extract out the title, author, and webUrlField  values
                         if (properties.has(TITLE_KEY)) {
                             if (!properties.getString(TITLE_KEY).isEmpty()) {
                                 title = properties.getString(TITLE_KEY);
+                                Log.d(LOG_TAG, "******title=" + title);
                             }
                         } else title = "N/A";
 
                         String sectionToSearch = " ";
                         if (properties.has(SECTION_KEY)) {
                             if (!properties.getString(SECTION_KEY).isEmpty()) {
-                                sectionToSearch = properties.getString(SECTION_KEY).replaceAll("[\\[\\]]", "");
-                                sectionToSearch = sectionToSearch.replaceAll("\"", "");
+                                sectionToSearch = properties.getString(SECTION_KEY);
 
                             }
                         } else sectionToSearch = "N/A";

@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                         // Inform user when EditText is empty
                         Toast.makeText(MainActivity.this, "EditText is empty ", LENGTH_SHORT).show();
                     } else {
-                        //booksListView.setVisibility(View.VISIBLE);
+
                         // When EditText is not populated with chars replace blank space by %20 to perform search
                         stringToSearch = String.valueOf(editTextView.getText());
                         stringToSearch = stringToSearch.replace(" ", "%20");
@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                         google_books_Api_url2="https://content.guardianapis.com/search?section=science&q=science&api-key=51352e97-5002-4c5d-a466-10788a261e6a";
 Toast.makeText(MainActivity.this, google_books_Api_url2, LENGTH_SHORT).show();
 Log.d("Main","google_books_Api_url2" + google_books_Api_url2 );
+
                         // Start the AsyncTask to fetch the book's data
                         BookListAsyncTask task = new BookListAsyncTask();
                         task.execute(google_books_Api_url2);
@@ -151,7 +152,7 @@ Log.d("Main","google_books_Api_url2" + google_books_Api_url2 );
                 return null;
             }
             ArrayList<NewsData> result = (ArrayList<NewsData>) Utils.fetchNewsData(Urls[0]);
-            Log.d("zzzz","result"+ result );
+            Log.d("zzzz","result fetch"+ result );
             return result;
         }
 
