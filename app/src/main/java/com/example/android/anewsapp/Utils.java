@@ -148,11 +148,11 @@ public class Utils {
             // If there are "results" in the response create an array
             if (baseJsonResponse.has("response")) {
 
-                JSONObject hasResponse = new JSONObject(newsApiJSON);
+                JSONObject hasResponse = new JSONObject("response");
 
                 if (hasResponse.has("results")) {
 
-                    JSONArray itemsArray = baseJsonResponse.getJSONArray("results");
+                    JSONArray itemsArray = hasResponse.getJSONArray("results");
 
 
                     // Retrieve all items what are needed to be shown
