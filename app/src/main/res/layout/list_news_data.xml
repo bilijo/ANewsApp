@@ -13,7 +13,7 @@
             android:layout_weight="1"
             android:textSize="@dimen/data_text_size"
             android:background="@color/row_title"
-            android:text="@string/book_title"/>
+            android:text="@string/news_title"/>
 
         <TextView
             android:id="@+id/text_author_news"
@@ -23,7 +23,7 @@
             android:padding="@dimen/view_padding"
             android:textSize="@dimen/data_text_size"
             android:background="@color/row_author"
-            android:text="@string/book_author" />
+            android:text="@string/news_section" />
 
         <TextView
             android:id="@+id/text_publisher_news"
@@ -34,7 +34,7 @@
             android:layout_marginBottom="@dimen/publisher_row_margin"
             android:textSize="@dimen/data_text_size"
             android:background="@color/row_publisher"
-            android:text="@string/book_author" />
+            android:text="@string/news_url" />
     </LinearLayout>
 
 

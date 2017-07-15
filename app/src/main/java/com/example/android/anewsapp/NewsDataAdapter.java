@@ -45,7 +45,7 @@ public class NewsDataAdapter extends ArrayAdapter<NewsData> {
 
         // Add news title with getter getmBookTitle()
         TextView titleTexView = (TextView) listItemView.findViewById(R.id.text_title_news);
-        titleTexView.setText(currentNewsData.getmNewsTitle());
+        titleTexView.setText(currentNewsData != null ? currentNewsData.getmNewsTitle() : null);
 
         // Add news author with getter getmAuthor()
         TextView authorTextView = (TextView) listItemView.findViewById(R.id.text_author_news);

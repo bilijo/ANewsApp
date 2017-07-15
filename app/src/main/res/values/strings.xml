@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">BookListingApp</string>
-    <string name="book_title">"the book"</string>
-    <string name="book_author">"the author"</string>
-    <string name="book_publisher">"the publisher"</string>
+    <string name="app_name">News App</string>
+    <string name="news_title">"the newa"</string>
+    <string name="news_section">"the section"</string>
+    <string name="news_url">"the url"</string>
 
     <string name="btn_search">"Enter an Author"</string>
 
-    <!-- Text to display in the list when there are no books according given name-->
+    <!-- Text to display in the list when there are no news according given name-->
     <string name="textView_not_found">Name not found: \n try another one or check spelling</string>
 
     <!-- Error message when there is no internet connectivity -->

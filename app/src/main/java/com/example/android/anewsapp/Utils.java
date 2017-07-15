@@ -148,7 +148,7 @@ public class Utils {
             // If there are "results" in the response create an array
             if (baseJsonResponse.has("response")) {
 
-                JSONObject hasResponse = new JSONObject("response");
+                JSONObject hasResponse = baseJsonResponse.getJSONObject("response");
 
                 if (hasResponse.has("results")) {
 
