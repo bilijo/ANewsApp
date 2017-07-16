@@ -45,7 +45,7 @@ public class NewsLoader extends AsyncTaskLoader<List<NewsData>> {
 
         // Perform the network request, parse the response, and extract a list of News.
         List<NewsData> newsDatas = Utils.fetchNewsData(mUrl);
-        Log.d(LOG_TAG ,"Utils.fetchNewsData(mUrl)" + newsDatas);
+        Log.d(LOG_TAG ,"Utils.fetchNewsData(mUrl)" + mUrl);
         return newsDatas;
     }
 }
