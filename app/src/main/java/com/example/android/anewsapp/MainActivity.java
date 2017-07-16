@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                         // When EditText is not populated with chars replace blank space by %20 to perform search
                         stringToSearch = String.valueOf(editTextView.getText());
                         stringToSearch = stringToSearch.replace(" ", "%20");
-                        // Link the author name given by the user to the google API url
+                        // Link the section name given by the user to the guardian API url
                         guardian_news_api_url2 = guardian_api_url + stringToSearch + keyUser;
 
 
@@ -150,6 +150,8 @@ Toast.makeText(MainActivity.this, guardian_news_api_url2, LENGTH_SHORT).show();
     }
 
     private boolean checkNetworkConnection() {
+
+        Log.d("Main","checkNetworkConnection=");
         // Query the active network and determine if it has Internet connectivity.
         ConnectivityManager cm =
                 (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -173,11 +175,17 @@ Toast.makeText(MainActivity.this, guardian_news_api_url2, LENGTH_SHORT).show();
     public void onLoadFinished(Loader<List<NewsData>> loader, List<NewsData> newsDatasArrayList) {
         // Clear the adapter of previous News data
         mAdapter.clear();
-
+        mEmptyStateTextView = (TextView) findViewById(R.id.text_emptyView);
         // If there is a valid list of {@link News}s, then add them to the adapter's
         // data set. This will trigger the ListView to update.
         if (newsDatasArrayList != null && !newsDatasArrayList.isEmpty()) {
+            mEmptyStateTextView.setVisibility(View.GONE);
             mAdapter.addAll(newsDatasArrayList);
+        } else {
+            // Create a reference to the emptyView
+            mEmptyStateTextView.setVisibility(View.VISIBLE);
+            newsListView.setEmptyView(mEmptyStateTextView);
+
         }
 
     }
